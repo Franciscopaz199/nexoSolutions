@@ -1,22 +1,41 @@
+---
+import "../styles/global.css";
+
+import { Astro } from 'astro';
+import logo from '../assets/imagenes/logo.png';
+---
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href={logo.src} />
+
+		<!-- Meta SEO -->
+		<title>Nexo Solutions | Desarrollo y Venta de Software en Honduras</title>
+		<meta name="description" content="Nexo Solutions es una empresa hondureña especializada en el desarrollo y venta de software personalizado para empresas y negocios." />
+		<meta name="keywords" content="software Honduras, Nexo Solutions, desarrollo de software, empresa de software, venta de software, soluciones tecnológicas" />
+		<meta name="author" content="Nexo Solutions" />
+
+		<!-- Meta para compartir en redes sociales -->
+		<meta property="og:title" content="Nexo Solutions | Software a la medida en Honduras" />
+		<meta property="og:description" content="Expertos en desarrollo y venta de software personalizado en Honduras. Conoce nuestras soluciones tecnológicas." />
+		<meta property="og:image" content={logo.src} />
+		<meta property="og:url" content="https://tudominio.com" />
+		<meta property="og:type" content="website" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Nexo Solutions | Software en Honduras" />
+		<meta name="twitter:description" content="Desarrollo de software personalizado en Honduras para empresas modernas." />
+		<meta name="twitter:image" content={logo.src} />
+
+		<!-- Otros -->
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+
